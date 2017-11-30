@@ -1,0 +1,22 @@
+{
+  "name": "de.schulte360.web.createjs",
+  "version": "1.0.0",
+  "description": "https://createjs.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thoschu/de.schulte360.web.createjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thoschu/de.schulte360.web.createjs/issues"
+  },
+  "homepage": "https://github.com/thoschu/de.schulte360.web.createjs#readme",
+  "dependencies": {
+    "createjs": "^1.0.1"
+  }
+}

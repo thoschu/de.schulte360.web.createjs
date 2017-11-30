@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>code.createjs.com/easeljs</title>
+        <link href="https://fonts.googleapis.com/css?family=Unkempt" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <script>
+            var canvas, stage, text, element;
+
+            function draw() {
+                canvas = document.getElementById('canvas');
+                stage = new createjs.Stage(canvas);
+                text = new createjs.Text();
+                text.text = "Moin moin...";
+                text.font = "bold 64px 'Unkempt'";
+                text.color = "#FF0000";
+                stage.addChild(text);
+
+                element = document.getElementById('thumb');
+                var de = new createjs.DOMElement(element);
+                de.x = 130;
+                de.y = 70;
+                stage.addChild(de);
+
+                var g = new createjs.Graphics();
+                g.setStrokeStyle(2);
+                var color = createjs.Graphics.getRGB(0, 255, 0);
+                g.beginStroke(color);
+
+                g.moveTo(0,0);
+                g.lineTo(100,100);
+                g.lineTo(0,100);
+
+                var shape = new createjs.Shape(g);
+                stage.addChild(shape);
+
+
+
+
+
+
+                stage.update();
+                createjs.Ticker.addEventListener("tick", stage);
+            };
+        </script>
+    </head>
+    <body onload="draw()">
+        <i id="thumb" class="fa fa-thumbs-up fa-3x" aria-hidden="true"></i>
+        <canvas id="canvas" width="640" height="480" style="background-color: darkgrey;"></canvas>
+    </body>
+</html>
